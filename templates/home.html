@@ -11,15 +11,26 @@
       #banner{
         height : 300px;
         width :100%;
+        object-fit:cover;
+        margin-bottom :16px;
       }
     </style>
     </head>
   <body>
+   {% include 'nav.html' %}
+      <img class ="img-fluid" id ="banner" src=https://codecamppy1--joeljoseph29.repl.co/static/apppic1.jpg width="400" height="200">
     <div class="container">
    <h1 class="text-center mt-2 mb-4"> {{course_provider}} CAMP</h1>
-    <img class ="img-fluid" id ="banner" src=https://codecamppy1--joeljoseph29.repl.co/static/apppic1.jpg width="400" height="200">
-    <h2 class="text-center mt-2 mb-4">About Code Camp</h2>
-    <p class="lead">Code Camp is a form of unconference. Originating with the goal of helping developers who could not make it to work during regular hours, the project offers technical presentations and provides access to technical content.</p>
+   <div class="row" style= "margin-bottom: 16px">
+     <div class="col-md-6">
+     <p class="lead">Code Camp is a form of unconference. Originating with the goal of helping developers who could not make it to work during regular hours, the project offers technical presentations and provides access to technical content. Whenever the question arises, why is coding important for the future, the answer is really simple. Today, all of society's machines operate on programming. Expertise or advanced skills in computer languages would enhance a professional's technical skills and will open up more employment opportunities.</p>
+       </div>
+  <div class="d-none d-md-block col-md-6">
+     <img src="/static/ppl.jpg" style= "height:320px;border-radius:4px;">
+  </div>
+   </div>
+   
+      
     <h2 class="text-center">Courses</h2>
     <div>
       {% for coursee in course %}
@@ -27,9 +38,9 @@
       {% endfor %}
     </div>
       <div class="text-center"> 
-   <button class="btn btn-primary btn-lg">Contact Us</button>
-    <p class= "mt-4"> copyright@Joel</p>
+   <a href= "mailto:anjalianjuzz2002@gmail.com?subject=Queries%20and%20Suggestions%20related%20to%20CODE%20CAMP%20website.&body=My%20name%3A%20%3CEnter%20your%20name%3E%0D%0A%0D%0AMy%20Query%3A%20%3CEnter%20your%20query%3E%0D%0A%0D%0AMy%20Suggestion%3A%20%3CEnter%20your%20suggestion%3E" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
       </div>
+    {% include 'footer.html' %}
     </body>
 </html>
